@@ -77,8 +77,19 @@ Explanation:
 
 # Usage
  
- ```javascript
- 	render($('form.h'))
+ ```html
+ 	<form class='h'>
+ 	- age: What is your age?
+ 	- cookies: Do you like cookies?
+ 		radio
+ 			Yes
+ 			No
+ 	- weather: What weather do you like?
+ 		checkbox
+ 			Cold
+ 			Hot
+ 	</form>
+ 	<script src='path/to/hacker_form.js'>
  ```
 
  Example on `index.jade`.
