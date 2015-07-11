@@ -105,5 +105,5 @@ To watch for file changes I use [guard livereload](https://github.com/guard/guar
 Compile with `coffee -co dist .`
 Watch with `coffee -wo dist .`
 
- # TODO
+# TODO
 
