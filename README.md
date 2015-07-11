@@ -98,11 +98,13 @@ To watch for file changes I use [guard livereload](https://github.com/guard/guar
 1. Add extensions you want the browser to reload when there is a change in files with that extensions
 1. Run guard in the folder
 1. Install [LiveReload for Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
+1. Go to [localhost:3000/index.jade](http://localhost:3000/index.jade)
 1. Click on the extension icon
 
 # Compile and Watch
 
 Compile with `coffee -co dist .`
+
 Watch with `coffee -wo dist .`
 
 # TODO
