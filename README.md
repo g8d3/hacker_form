@@ -72,7 +72,7 @@ Explanation:
 1. `:` delimites name and question text
 1. `name` is the name for the inputs
 1. `question text` is the question text
-1. `type` can be `text`, `checkbox`, `radio`, `textarea`
+1. `type` can be `text`, `checkbox`, `radio`, `textarea`. `text` is default.
 1. `option_1` and `option_2` are the texts to display as options
 
 # Usage
