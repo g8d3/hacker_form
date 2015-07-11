@@ -100,6 +100,10 @@ To watch for file changes I use [guard livereload](https://github.com/guard/guar
 1. Install [LiveReload for Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
 1. Click on the extension icon
 
+# Compile and Watch
+
+Compile with `coffee -co dist .`
+Watch with `coffee -wo dist .`
+
  # TODO
 
- Package.
