@@ -83,6 +83,23 @@ Explanation:
 
  Example on `index.jade`.
 
+# How to run
+
+I use npm serve package:
+
+```
+npm i -g serve
+serve
+```
+
+To watch for file changes I use [guard livereload](https://github.com/guard/guard-livereload) on Ubuntu:
+
+1. Install gem and generate Guardfile
+1. Add extensions you want the browser to reload when there is a change in files with that extensions
+1. Run guard in the folder
+1. Install [LiveReload for Chrome](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
+1. Click on the extension icon
+
  # TODO
 
  Package.
