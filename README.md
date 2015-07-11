@@ -73,7 +73,17 @@ Explanation:
 1. `name` is the name for the inputs
 1. `question text` is the question text
 1. `type` can be `text`, `checkbox`, `radio`, `textarea`. `text` is default.
-1. `option_1` and `option_2` are the texts to display as options
+1. `option 1` and `option2` are the texts to display as options
+1. If option starts with `other`(case insensitive), you get a text field in front of it.
+
+Note: tabs are not needed, you could write:
+
+```
+- name: What is your name?
+radio
+I don't want to tell you
+Other
+```
 
 # Usage
  
