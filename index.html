@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hacker form by juanpastas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Hacker form</h1>
+      <h2 class="project-tagline">A DSL to create HTML forms(Using this currently for surveys) from plain text.</h2>
+      <a href="https://github.com/juanpastas/hacker_form" class="btn">View on GitHub</a>
+      <a href="https://github.com/juanpastas/hacker_form/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/juanpastas/hacker_form/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="hacker-form" class="anchor" href="#hacker-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacker Form</h1>
+
+<p>A DSL to create HTML forms(Using this currently for surveys) from plain text.</p>
+
+<pre><code>- weekly_time: How many hours do you learn web development per week?​
+    radio
+        Less than 5 hours
+        More than 5 hours and less than 10 hours
+        More than 10 hours and less than 15 hours
+        More than 15 hours
+- learning_resources: How have you learned? Which resources do you use?​
+    checkbox
+        Youtube
+        Udemy
+        Coursera
+        University online courses
+        Other or specify
+- built_things: What have you built?​ Please share links if you have.
+    textarea
+- email: Write your email here if you want to talk more about your needs
+</code></pre>
+
+<p>This will generate a form like this:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">p</span>&gt;How many hours do you learn web development per week?​&lt;/<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">label</span> <span class="pl-e">for</span>=<span class="pl-s"><span class="pl-pds">"</span>weekly_time_0<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>radio<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>weekly_time<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>weekly_time_0<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">span</span>&gt;Less than 5 hours&lt;/<span class="pl-ent">span</span>&gt;
+&lt;/<span class="pl-ent">label</span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">label</span> <span class="pl-e">for</span>=<span class="pl-s"><span class="pl-pds">"</span>weekly_time_1<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>radio<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>weekly_time<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>weekly_time_1<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">span</span>&gt;More than 15 hours&lt;/<span class="pl-ent">span</span>&gt;
+&lt;/<span class="pl-ent">label</span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt;How have you learned? Which resources do you use?​&lt;/<span class="pl-ent">p</span>&gt;
+&lt;<span class="pl-ent">label</span> <span class="pl-e">for</span>=<span class="pl-s"><span class="pl-pds">"</span>learning_resources_0<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>checkbox<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>learning_resources<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>learning_resources_0<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">span</span>&gt;Youtube&lt;/<span class="pl-ent">span</span>&gt;
+&lt;/<span class="pl-ent">label</span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">label</span> <span class="pl-e">for</span>=<span class="pl-s"><span class="pl-pds">"</span>learning_resources_1<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">span</span>&gt;Other or specify&lt;/<span class="pl-ent">span</span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>other<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>learning_resources_other<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>learning_resources<span class="pl-pds">"</span></span>&gt;
+&lt;/<span class="pl-ent">label</span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">label</span> <span class="pl-e">for</span>=<span class="pl-s"><span class="pl-pds">"</span>built_things<span class="pl-pds">"</span></span>&gt;What have you built?​ Please share links if you have.&lt;/<span class="pl-ent">label</span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">textarea</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>built_things<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>built_things<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">textarea</span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">label</span> <span class="pl-e">for</span>=<span class="pl-s"><span class="pl-pds">"</span>email<span class="pl-pds">"</span></span>&gt;Write your email here if you want to talk more about your needs&lt;/<span class="pl-ent">label</span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;
+&lt;<span class="pl-ent">input</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>email<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>email<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">br</span>&gt;</pre></div>
+
+<h1>
+<a id="format" class="anchor" href="#format" aria-hidden="true"><span class="octicon octicon-link"></span></a>Format</h1>
+
+<pre><code>- name: question text
+    type
+        option 1
+        option 2
+</code></pre>
+
+<p>Explanation:</p>
+
+<ol>
+<li>
+<code>-</code> is a question delimiter</li>
+<li>
+<code>:</code> delimites name and question text</li>
+<li>
+<code>name</code> is the name for the inputs</li>
+<li>
+<code>question text</code> is the question text</li>
+<li>
+<code>type</code> can be <code>text</code>, <code>checkbox</code>, <code>radio</code>, <code>textarea</code>
+</li>
+<li>
+<code>option_1</code> and <code>option_2</code> are the texts to display as options</li>
+</ol>
+
+<h1>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
+
+<div class="highlight highlight-javascript"><pre>    render($(<span class="pl-s"><span class="pl-pds">'</span>form.h<span class="pl-pds">'</span></span>))</pre></div>
+
+<p>Example on <code>index.jade</code>.</p>
+
+<h1>
+<a id="how-to-run" class="anchor" href="#how-to-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to run</h1>
+
+<p>I use npm serve package:</p>
+
+<pre><code>npm i -g serve
+serve
+</code></pre>
+
+<p>To watch for file changes I use <a href="https://github.com/guard/guard-livereload">guard livereload</a> on Ubuntu:</p>
+
+<ol>
+<li>Install gem and generate Guardfile</li>
+<li>Add extensions you want the browser to reload when there is a change in files with that extensions</li>
+<li>Run guard in the folder</li>
+<li>Install <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en">LiveReload for Chrome</a>.</li>
+<li>Click on the extension icon</li>
+</ol>
+
+<h1>
+<a id="compile-and-watch" class="anchor" href="#compile-and-watch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compile and Watch</h1>
+
+<p>Compile with <code>coffee -co dist .</code>
+Watch with <code>coffee -wo dist .</code></p>
+
+<p># TODO</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/juanpastas/hacker_form">Hacker form</a> is maintained by <a href="https://github.com/juanpastas">juanpastas</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
