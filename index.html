@@ -10,16 +10,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-    <!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M5LNJ3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M5LNJ3');</script>
-<!-- End Google Tag Manager -->
-    
     <section class="page-header">
       <h1 class="project-name">Hacker form</h1>
       <h2 class="project-tagline">A DSL to create HTML forms(Using this currently for surveys) from plain text.</h2>
@@ -106,16 +96,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>
 <code>question text</code> is the question text</li>
 <li>
-<code>type</code> can be <code>text</code>, <code>checkbox</code>, <code>radio</code>, <code>textarea</code>
-</li>
+<code>type</code> can be <code>text</code>, <code>checkbox</code>, <code>radio</code>, <code>textarea</code>. <code>text</code> is default.</li>
 <li>
-<code>option_1</code> and <code>option_2</code> are the texts to display as options</li>
+<code>option 1</code> and <code>option2</code> are the texts to display as options</li>
+<li>If option starts with <code>other</code>(case insensitive), you get a text field in front of it.</li>
 </ol>
+
+<p>Note: tabs are not needed, you could write:</p>
+
+<pre><code>- name: What is your name?
+radio
+I don't want to tell you
+Other
+</code></pre>
 
 <h1>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h1>
 
-<div class="highlight highlight-javascript"><pre>    render($(<span class="pl-s"><span class="pl-pds">'</span>form.h<span class="pl-pds">'</span></span>))</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">form</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">'</span>h<span class="pl-pds">'</span></span>&gt;
+- age: What is your age?
+- cookies: Do you like cookies?
+    radio
+        Yes
+        No
+- weather: What weather do you like?
+    checkbox
+        Cold
+        Hot
+&lt;/<span class="pl-ent">form</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">'</span>path/to/hacker_form.js<span class="pl-pds">'</span></span>&gt;</span></pre></div>
 
 <p>Example on <code>index.jade</code>.</p>
 
@@ -135,14 +144,17 @@ serve
 <li>Add extensions you want the browser to reload when there is a change in files with that extensions</li>
 <li>Run guard in the folder</li>
 <li>Install <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en">LiveReload for Chrome</a>.</li>
+<li>Go to <a href="http://localhost:3000/index.jade">localhost:3000/index.jade</a>
+</li>
 <li>Click on the extension icon</li>
 </ol>
 
 <h1>
 <a id="compile-and-watch" class="anchor" href="#compile-and-watch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compile and Watch</h1>
 
-<p>Compile with <code>coffee -co dist .</code>
-Watch with <code>coffee -wo dist .</code></p>
+<p>Compile with <code>coffee -co dist .</code></p>
+
+<p>Watch with <code>coffee -wo dist .</code></p>
 
 <h1>
 <a id="todo" class="anchor" href="#todo" aria-hidden="true"><span class="octicon octicon-link"></span></a>TODO</h1>
