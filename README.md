@@ -70,7 +70,7 @@ Explanation:
 
 1. `- ` is a question delimiter
 1. `:` delimites name and question text
-1. `name` is the name for the inputs
+1. `name` is the name for generated input
 1. `question text` is the question text
 1. `type` can be `text`, `checkbox`, `radio`, `textarea`. `text` is default.
 1. `option 1` and `option2` are the texts to display as options
