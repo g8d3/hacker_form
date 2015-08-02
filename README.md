@@ -130,3 +130,6 @@ Watch with `coffee -wo dist .`
 
 # TODO
 
+- Add page where it can tried.
+
+
