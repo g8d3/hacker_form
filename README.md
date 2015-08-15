@@ -1,7 +1,7 @@
 Hacker Form
 =========
 
-A DSL to create HTML forms(Using this currently for surveys) from plain text.
+A DSL to create HTML forms from plain text.
 
 ```
 - weekly_time: How many hours do you learn web development per week?​
